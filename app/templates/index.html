@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    
+    <h1>Static Image</h1> <br>
+    <img src="{% static 'app/images/wallpaperflare.jpg' %}" height="200" width="200"><br>
+
+    <h1>Media data</h1> <br>
+
+
+    {% for image in images %}
+        <img src="{{ image.image.url }}" height="200" width="200"><br><br><br>
+    {% endfor %}
+
+
+</body>
+</html>
