@@ -564,7 +564,7 @@ lrwxrwxrwx 1 root root 34 মার্চ     19 22:01 default -> /etc/nginx/sit
 lrwxrwxrwx 1 root root 33 মার্চ     23 00:11 mysite -> /etc/nginx/sites-available/mysite
 ```
 
-Remove or Backup Existing File:
+Remove Existing File:
 
 If there's an existing file named mysite in `/etc/nginx/sites-enabled`, you can either remove it or rename it to something else to avoid conflicts:
 
@@ -585,6 +585,9 @@ Finally, you need to open up your firewall to normal traffic on port 80. Since y
     ../mysite$ sudo ufw allow 'Nginx Full'
 
 You should now be able to go to your server’s domain or IP address to view your application.
+
+### Website view
+<img src="./screenshot/website show.png" height="200">
 
 `Note`: After configuring Nginx, the next step should be securing traffic to the server using SSL/TLS. This is important because without it, all information, including passwords are sent over the network in plain text.
 
